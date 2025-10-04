@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuna Construções</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; transition: all 0.3s ease; }
+    header {
+      background: url('header.jpg') center/cover no-repeat;
+      color: white; padding: 80px 20px; text-align: left;
+    }
+    header h1 { font-size: 2.5em; margin: 0; }
+    header p { font-size: 1.2em; }
+    .btn {
+      display: inline-block; margin-top: 20px; padding: 12px 24px;
+      background: #f5b400; color: black; text-decoration: none; font-weight: bold;
+      border: none; cursor: pointer;
+    }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .dark { background: #222; color: white; }
+    .dark h2, .dark p { color: white; }
+    .services h2 { font-size: 1.8em; }
+    .grid { display: grid; gap: 20px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { background: #fff; padding: 20px; border: 1px solid #ddd; }
+    .card img { max-width: 100%; }
+    .highlight { color: #f5b400; font-weight: bold; }
+    footer {
+      background: #111; color: white; padding: 40px 20px; text-align: center;
+    }
+    footer a { color: #f5b400; text-decoration: none; }
+
+    /* ====== ESTILO DO MODO DE ACESSIBILIDADE ====== */
+    body.acessibilidade {
+      background-color: #fff;
+      color: #000;
+    }
+    body.acessibilidade .highlight {
+      color: #ff0000; /* Vermelho mais vibrante */
+    }
+    body.acessibilidade header {
+      background: #000; /* fundo escuro para contraste */
+      color: #ffeb3b; /* amarelo vibrante */
+    }
+    body.acessibilidade .btn {
+      background: #ff0000; /* botões bem destacados */
+      color: #fff;
+    }
+    body.acessibilidade footer {
+      background: #000;
+      color: #ffeb3b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <h1>Precisa construir uma casa?<br>Ligue para nós.</h1>
+    <p>A casa dos seus sonhos pode virar realidade. Conte conosco para concretizar isso.</p>
+    <a href="#contato" class="btn">ENTRE EM CONTATO</a>
+    <br><br>
+    <!-- NOVO BOTÃO DE ACESSIBILIDADE -->
+    <button class="btn" onclick="toggleAcessibilidade()">MODO DE ACESSIBILIDADE</button>
+  </header>
+
+  <!-- Sobre -->
+  <section class="dark">
+    <div class="grid grid-2">
+      <img src="construcao.jpg" alt="Trabalhador construindo">
+      <div>
+        <h2>Construímos casas <br> com um toque pessoal</h2>
+        <p>Dos <span class="highlight">sonhos aos projetos</span> e à realidade, a Kuna Construções pode ajudar.</p>
+        <p>Acreditamos que cada casa é a realização de um sonho. Guiados por valores como transparência, excelência e respeito, construímos não apenas estruturas, mas histórias e memórias que duram para sempre.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="services">
+    <h2>Serviços de construção civil</h2>
+    <p><span class="highlight">Somos especialistas em construção, reforma e renovações.</span></p>
+    <div class="grid grid-2">
+      <p>Nosso trabalho é guiado por qualidade, inovação e compromisso. Garantimos excelência em cada detalhe e acompanhamos cada etapa da obra para sua segurança e confiança.</p>
+      <p>Aliamos tecnologia e sustentabilidade em soluções inovadoras e eficientes, sempre buscando custo-benefício justo. Nosso foco é entregar sonhos com qualidade e durabilidade.</p>
+    </div>
+  </section>
+
+  <!-- Trabalhos -->
+  <section class="dark">
+    <h2 style="text-align:center;">Nosso Trabalho</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <img src="trabalho1.jpg" alt="Obra 1">
+        <p>Rua Tatsu, 123, São Paulo - SP</p>
+        <a href="#" class="btn">SAIBA MAIS</a>
+      </div>
+      <div class="card">
+        <img src="trabalho2.jpg" alt="Obra 2">
+        <p>Rua Ryduo, 123, São Paulo - SP</p>
+        <a href="#" class="btn">SAIBA MAIS</a>
+      </div>
+      <div class="card">
+        <img src="trabalho3.jpg" alt="Obra 3">
+        <p>Rua Yuki, 123, São Paulo - SP</p>
+        <a href="#" class="btn">SAIBA MAIS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Histórico -->
+  <section>
+    <h2 style="text-align:center;">Nosso histórico</h2>
+    <div class="grid grid-3" style="text-align:center;">
+      <div class="card">
+        <h3>Ano de fundação</h3>
+        <p class="highlight">1984</p>
+      </div>
+      <div class="card">
+        <h3>Clientes</h3>
+        <p class="highlight">456</p>
+      </div>
+      <div class="card">
+        <h3>Casas construídas</h3>
+        <p class="highlight">Mais de 321</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="dark">
+    <h2 style="text-align:center;">Depoimentos</h2>
+    <div class="grid grid-2">
+      <blockquote>“Contratar a KUNA foi a melhor decisão! Atendimento incrível e resultado impecável.”<br>- Lucas Salgueiro</blockquote>
+      <blockquote>“Qualidade impressionante, minha família está encantada com o resultado!”<br>- Maximiliano Neves</blockquote>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <footer id="contato">
+    <h2>Entre em contato</h2>
+    <p>Kuna Construções - Rua Juki, 123 - São Paulo, SP</p>
+    <p>Telefone: (99) 9999-9999 | Email: kuna.construcoes@gmail.com</p>
+    <p>Redes sociais: @kuna_construcoes</p>
+    <p>&copy; 2024 Kuna Construções</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleAcessibilidade() {
+      document.body.classList.toggle("acessibilidade");
+    }
+  </script>
+
+</body>
+</html>
